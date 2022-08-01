@@ -23,6 +23,26 @@ pipeline {
       }
 
     }
+        stage('cat README') {
+
+      when {
+
+        branch "source1"
+
+      }
+
+      steps {
+
+        sh '''
+
+          cat README.md
+
+        '''
+
+      }
+
+    }
+
 
   }
 
